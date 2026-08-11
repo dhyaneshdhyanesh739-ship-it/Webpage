@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HTML Practical Programs</title>
+    <!-- Internal CSS for styling the index page -->
+    <style>
+        /* Base page styles for clean academic aesthetic */
+        body {
+            font-family: 'Segoe UI', Arial, sans-serif;
+            background-color: #f4f7f6;
+            color: #333333;
+            margin: 0;
+            padding: 20px;
+            line-height: 1.6;
+        }
+
+        /* Centered main header container */
+        .container {
+            max-width: 800px;
+            margin: 30px auto;
+            background-color: #ffffff;
+            padding: 30px;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            border: 1px solid #dddddd;
+        }
+
+        h1 {
+            color: #1b365d;
+            text-align: center;
+            margin-bottom: 10px;
+            border-bottom: 2px solid #1b365d;
+            padding-bottom: 10px;
+        }
+
+        p.subtitle {
+            text-align: center;
+            color: #555555;
+            font-size: 1.1em;
+            margin-bottom: 30px;
+        }
+
+        /* Practical programs list styling */
+        .program-list {
+            list-style-type: none;
+            padding: 0;
+        }
+
+        .program-item {
+            background-color: #f9fbfd;
+            border: 1px solid #cbd5e1;
+            margin-bottom: 15px;
+            border-radius: 6px;
+            transition: background-color 0.2s ease;
+        }
+
+        .program-item:hover {
+            background-color: #eef4fc;
+        }
+
+        .program-link {
+            display: block;
+            padding: 15px 20px;
+            text-decoration: none;
+            color: #0f4c81;
+            font-weight: bold;
+            font-size: 1.1em;
+        }
+
+        .program-desc {
+            display: block;
+            font-weight: normal;
+            font-size: 0.9em;
+            color: #666666;
+            margin-top: 4px;
+        }
+
+        /* Footer styling */
+        footer {
+            text-align: center;
+            margin-top: 30px;
+            font-size: 0.9em;
+            color: #777777;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Main Container -->
+    <div class="container">
+        <!-- Main Heading using <h1> -->
+        <h1>HTML Practical Programs</h1>
+        
+        <!-- Descriptive Paragraph using <p> -->
+        <p class="subtitle">Web Application Development - College Practical Laboratory Index</p>
+
+        <!-- HTML Comment: List of Practical Programs -->
+        <!-- The unordered list below contains links (<a> tags) to all 4 practical HTML files -->
+        <ul class="program-list">
+            <li class="program-item">
+                <a class="program-link" href="student-nested-table.html">
+                    1. Student Details – Nested Table
+                    <span class="program-desc">Demonstrates nested table structure inside a contact details cell.</span>
+                </a>
+            </li>
+
+            <li class="program-item">
+                <a class="program-link" href="college-nested-table.html">
+                    2. College Information – Nested Table
+                    <span class="program-desc">Demonstrates main table containing nested tables for Faculty and Student records.</span>
+                </a>
+            </li>
+
+            <li class="program-item">
+                <a class="program-link" href="student-profile.html">
+                    3. Student Profile
+                    <span class="program-desc">Demonstrates HTML formatting tags, ordered/unordered lists, tables, and special HTML symbols.</span>
+                </a>
+            </li>
+
+            <li class="program-item">
+                <a class="program-link" href="college-timetable.html">
+                    4. College Timetable
+                    <span class="program-desc">Demonstrates timetable layout using table borders, th, colspan, and rowspan attributes.</span>
+                </a>
+            </li>
+        </ul>
+
+        <footer>
+            <p>&copy; 2026 Academic Practical Examination Portal | All Rights Reserved</p>
+        </footer>
+    </div>
+
+</body>
+</html>

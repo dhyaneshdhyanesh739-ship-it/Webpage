@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>College Timetable</title>
+    <!-- Internal CSS for academic clean layout -->
+    <style>
+        body {
+            font-family: 'Segoe UI', Arial, sans-serif;
+            background-color: #f4f7f6;
+            color: #333333;
+            margin: 0;
+            padding: 20px;
+            line-height: 1.6;
+        }
+
+        .container {
+            max-width: 950px;
+            margin: 20px auto;
+            background-color: #ffffff;
+            padding: 25px;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            border: 1px solid #dddddd;
+        }
+
+        h1 {
+            color: #1b365d;
+            text-align: center;
+            border-bottom: 2px solid #1b365d;
+            padding-bottom: 10px;
+        }
+
+        .description {
+            text-align: center;
+            color: #555555;
+            margin-bottom: 25px;
+        }
+
+        /* Timetable Table Styling */
+        table.timetable {
+            width: 100%;
+            border-collapse: separate;
+            margin-top: 15px;
+            margin-bottom: 20px;
+        }
+
+        /* Title Row Styling (Colspan) */
+        table.timetable th.title-header {
+            background-color: #1b365d;
+            color: #ffffff;
+            font-size: 1.3em;
+            padding: 12px;
+            text-align: center;
+            letter-spacing: 1px;
+        }
+
+        /* Time Header Styling */
+        table.timetable th.time-header {
+            background-color: #3b5998;
+            color: #ffffff;
+            padding: 10px 5px;
+            font-size: 0.9em;
+            text-align: center;
+        }
+
+        /* Day Header Styling */
+        table.timetable td.day-cell {
+            background-color: #eef4fc;
+            font-weight: bold;
+            color: #1b365d;
+            text-align: center;
+            width: 11%;
+        }
+
+        /* General Subject Cells */
+        table.timetable td {
+            text-align: center;
+            padding: 10px 5px;
+            font-size: 0.88em;
+            background-color: #ffffff;
+        }
+
+        /* Lunch Break Rowspan Styling */
+        table.timetable td.lunch-break {
+            background-color: #ffeaa7;
+            color: #d63031;
+            font-weight: bold;
+            vertical-align: middle;
+            font-size: 0.95em;
+            letter-spacing: 1px;
+        }
+
+        .back-link {
+            display: inline-block;
+            margin-bottom: 15px;
+            color: #0f4c81;
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        .back-link:hover {
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <!-- Navigation back link -->
+        <p><a class="back-link" href="index.html">&larr; Back to Index</a></p>
+
+        <!-- Main Heading using <h1> -->
+        <h1>College Timetable</h1>
+
+        <!-- Paragraph describing the timetable using <p> -->
+        <p class="description">
+            Practical Program 4: Class Timetable for Department of Computer Science and Engineering. 
+            This program demonstrates table construction using <code>border</code>, <code>cellpadding</code>, <code>cellspacing</code>, 
+            <code>&lt;th&gt;</code> headers, <code>colspan</code> for the title row, and <code>rowspan</code> for the Lunch Break cell.
+        </p>
+
+        <!-- 
+            HTML Comment:
+            TIMETABLE TABLE DEFINITION
+            Attributes used:
+            - border="1": Table border
+            - cellpadding="8": Cell padding
+            - cellspacing="0": Cell spacing
+        -->
+        <table class="timetable" border="1" cellpadding="8" cellspacing="0">
+            <thead>
+                <!-- 
+                    HTML Comment:
+                    COLSPAN DEMONSTRATION:
+                    The title cell below uses colspan="8" to span across all 8 columns of the timetable.
+                -->
+                <tr>
+                    <th colspan="8" class="title-header">III CSE – CLASS TIMETABLE</th>
+                </tr>
+
+                <!-- Period Headers using <th> -->
+                <tr>
+                    <th class="time-header">Day / Time</th>
+                    <th class="time-header">9:00 – 10:00</th>
+                    <th class="time-header">10:00 – 11:00</th>
+                    <th class="time-header">11:00 – 12:00</th>
+                    <th class="time-header">12:00 – 1:00</th>
+                    <th class="time-header">1:00 – 2:00</th>
+                    <th class="time-header">2:00 – 3:00</th>
+                    <th class="time-header">3:00 – 4:00</th>
+                </tr>
+            </thead>
+
+            <tbody>
+                <!-- MONDAY ROW -->
+                <tr>
+                    <td class="day-cell">Monday</td>
+                    <td>Data Structures</td>
+                    <td>Database Management Systems</td>
+                    <td>Mathematics</td>
+                    <!-- 
+                        HTML Comment:
+                        ROWSPAN DEMONSTRATION:
+                        The Lunch Break cell below uses rowspan="5" to span across all 5 weekdays for the 12:00–1:00 slot.
+                    -->
+                    <td rowspan="5" class="lunch-break">LUNCH<br>BREAK</td>
+                    <td>Operating Systems</td>
+                    <td>Computer Networks</td>
+                    <td>Web Technology</td>
+                </tr>
+
+                <!-- TUESDAY ROW (Notice: 12:00-1:00 slot cell is omitted due to rowspan="5" on Monday) -->
+                <tr>
+                    <td class="day-cell">Tuesday</td>
+                    <td>Computer Networks</td>
+                    <td>Web Technology</td>
+                    <td>Artificial Intelligence</td>
+                    <td>Data Structures</td>
+                    <td>Database Management Systems</td>
+                    <td>Mathematics</td>
+                </tr>
+
+                <!-- WEDNESDAY ROW -->
+                <tr>
+                    <td class="day-cell">Wednesday</td>
+                    <td>Operating Systems</td>
+                    <td>Data Structures</td>
+                    <td>Database Management Systems</td>
+                    <td>Mathematics</td>
+                    <td>Artificial Intelligence</td>
+                    <td>Web Technology</td>
+                </tr>
+
+                <!-- THURSDAY ROW -->
+                <tr>
+                    <td class="day-cell">Thursday</td>
+                    <td>Mathematics</td>
+                    <td>Artificial Intelligence</td>
+                    <td>Web Technology</td>
+                    <td>Computer Networks</td>
+                    <td>Operating Systems</td>
+                    <td>Data Structures</td>
+                </tr>
+
+                <!-- FRIDAY ROW -->
+                <tr>
+                    <td class="day-cell">Friday</td>
+                    <td>Database Management Systems</td>
+                    <td>Operating Systems</td>
+                    <td>Computer Networks</td>
+                    <td>Web Technology</td>
+                    <td>Artificial Intelligence</td>
+                    <td>Mathematics</td>
+                </tr>
+            </tbody>
+        </table>
+
+        <!-- HTML Comment: Concept summary for examination -->
+        <p><em>Concept: <code>colspan</code> merges cells horizontally across columns, while <code>rowspan</code> merges cells vertically across rows.</em></p>
+    </div>
+
+</body>
+</html>

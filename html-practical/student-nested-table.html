@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student Details - Nested Table</title>
+    <!-- Internal CSS for academic clean layout -->
+    <style>
+        body {
+            font-family: 'Segoe UI', Arial, sans-serif;
+            background-color: #f4f7f6;
+            color: #333333;
+            margin: 0;
+            padding: 20px;
+            line-height: 1.6;
+        }
+
+        .container {
+            max-width: 850px;
+            margin: 20px auto;
+            background-color: #ffffff;
+            padding: 25px;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            border: 1px solid #dddddd;
+        }
+
+        h1 {
+            color: #1b365d;
+            text-align: center;
+            border-bottom: 2px solid #1b365d;
+            padding-bottom: 10px;
+        }
+
+        .description {
+            text-align: center;
+            color: #555555;
+            margin-bottom: 25px;
+        }
+
+        /* Outer Main Table Styling */
+        table.outer-table {
+            width: 100%;
+            border-collapse: separate; /* Allows cellspacing to be visible */
+            margin-bottom: 20px;
+            background-color: #ffffff;
+        }
+
+        table.outer-table > tbody > tr > th {
+            background-color: #1b365d;
+            color: #ffffff;
+            text-align: center;
+            padding: 10px;
+        }
+
+        table.outer-table > tbody > tr > td {
+            text-align: center;
+            vertical-align: middle;
+        }
+
+        /* Inner Nested Table Styling */
+        table.inner-table {
+            width: 100%;
+            border-collapse: collapse;
+            background-color: #f9fbfd;
+        }
+
+        table.inner-table th {
+            background-color: #4a6984;
+            color: #ffffff;
+            font-size: 0.9em;
+            padding: 6px;
+        }
+
+        table.inner-table td {
+            font-size: 0.9em;
+            padding: 6px;
+            border: 1px solid #cbd5e1;
+        }
+
+        .back-link {
+            display: inline-block;
+            margin-top: 15px;
+            color: #0f4c81;
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        .back-link:hover {
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <!-- Main Page Heading -->
+        <h1>Student Details</h1>
+        <p class="description">Practical Program 1: Demonstrating a Nested Table inside the Contact Details column.</p>
+
+        <!-- HTML Comment: Navigation back to Index Page -->
+        <p><a class="back-link" href="index.html">&larr; Back to Index</a></p>
+
+        <!-- HTML Comment: 
+            MAIN TABLE DEFINITION
+            Attributes used:
+            - border="1": Displays table borders
+            - cellpadding="8": Specifies padding inside each cell
+            - cellspacing="0": Specifies space between cells
+        -->
+        <table class="outer-table" border="1" cellpadding="8" cellspacing="0">
+            <thead>
+                <tr>
+                    <th>Roll No</th>
+                    <th>Name</th>
+                    <th>Contact Details (Nested Table)</th>
+                </tr>
+            </thead>
+            <tbody>
+                <!-- Student Record 1 -->
+                <tr>
+                    <td>101</td>
+                    <td>Arun</td>
+                    <!-- 
+                        HTML Comment: 
+                        NESTED TABLE CONCEPT:
+                        The cell below contains another <table> element to organize phone and email.
+                    -->
+                    <td>
+                        <table class="inner-table" border="1" cellpadding="5" cellspacing="0">
+                            <tr>
+                                <th>Phone</th>
+                                <th>Email</th>
+                            </tr>
+                            <tr>
+                                <td>9876543210</td>
+                                <td>arun@gmail.com</td>
+                            </tr>
+                        </table>
+                    </td>
+                </tr>
+
+                <!-- Student Record 2 -->
+                <tr>
+                    <td>102</td>
+                    <td>Priya</td>
+                    <td>
+                        <table class="inner-table" border="1" cellpadding="5" cellspacing="0">
+                            <tr>
+                                <th>Phone</th>
+                                <th>Email</th>
+                            </tr>
+                            <tr>
+                                <td>9123456789</td>
+                                <td>priya@gmail.com</td>
+                            </tr>
+                        </table>
+                    </td>
+                </tr>
+
+                <!-- Student Record 3 -->
+                <tr>
+                    <td>103</td>
+                    <td>Vijay</td>
+                    <td>
+                        <table class="inner-table" border="1" cellpadding="5" cellspacing="0">
+                            <tr>
+                                <th>Phone</th>
+                                <th>Email</th>
+                            </tr>
+                            <tr>
+                                <td>9988776655</td>
+                                <td>vijay@gmail.com</td>
+                            </tr>
+                        </table>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+
+        <!-- HTML Comment: Additional note for practical examination -->
+        <p><em>Note: In HTML, a nested table is placed directly inside the &lt;td&gt; (table data) tag of a parent table.</em></p>
+    </div>
+
+</body>
+</html>

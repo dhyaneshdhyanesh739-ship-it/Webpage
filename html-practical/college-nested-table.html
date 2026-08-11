@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>College Information - Nested Table</title>
+    <!-- Internal CSS for academic clean layout -->
+    <style>
+        body {
+            font-family: 'Segoe UI', Arial, sans-serif;
+            background-color: #f4f7f6;
+            color: #333333;
+            margin: 0;
+            padding: 20px;
+            line-height: 1.6;
+        }
+
+        .container {
+            max-width: 900px;
+            margin: 20px auto;
+            background-color: #ffffff;
+            padding: 25px;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            border: 1px solid #dddddd;
+        }
+
+        h1 {
+            color: #1b365d;
+            text-align: center;
+            border-bottom: 2px solid #1b365d;
+            padding-bottom: 10px;
+        }
+
+        .description {
+            text-align: center;
+            color: #555555;
+            margin-bottom: 25px;
+        }
+
+        /* Main Outer Table */
+        table.outer-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-bottom: 20px;
+        }
+
+        table.outer-table > tbody > tr > th {
+            background-color: #1b365d;
+            color: #ffffff;
+            text-align: left;
+            padding: 12px;
+            width: 25%;
+        }
+
+        table.outer-table > tbody > tr > td {
+            padding: 12px;
+            background-color: #ffffff;
+        }
+
+        /* Nested Tables Styling */
+        table.nested-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 5px;
+        }
+
+        table.nested-table th {
+            background-color: #3b5998;
+            color: #ffffff;
+            padding: 8px;
+            font-size: 0.9em;
+            text-align: left;
+        }
+
+        table.nested-table td {
+            padding: 8px;
+            font-size: 0.9em;
+            border: 1px solid #cccccc;
+            background-color: #f9fbfd;
+        }
+
+        .back-link {
+            display: inline-block;
+            margin-top: 15px;
+            color: #0f4c81;
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        .back-link:hover {
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <!-- Main Heading -->
+        <h1>College Information</h1>
+        <p class="description">Practical Program 2: Demonstrating multiple nested tables inside a parent table cell structure.</p>
+
+        <!-- HTML Comment: Navigation back link -->
+        <p><a class="back-link" href="index.html">&larr; Back to Index</a></p>
+
+        <!-- 
+            HTML Comment:
+            MAIN COLLEGE INFORMATION TABLE
+            Attributes: border="1", cellpadding="8", cellspacing="0"
+        -->
+        <table class="outer-table" border="1" cellpadding="8" cellspacing="0">
+            <tbody>
+                <!-- Row 1: College Name -->
+                <tr>
+                    <th>College Name</th>
+                    <td><strong>KIT College</strong></td>
+                </tr>
+
+                <!-- Row 2: Department -->
+                <tr>
+                    <th>Department</th>
+                    <td>Computer Science and Engineering(AI&DS)</td>
+                </tr>
+
+                <!-- Row 3: Faculty Details Cell containing Nested Faculty Table -->
+                <tr>
+                    <th>Faculty Details</th>
+                    <td>
+                        <!-- HTML Comment: NESTED TABLE FOR FACULTY DETAILS -->
+                        <table class="nested-table" border="1" cellpadding="6" cellspacing="0">
+                            <thead>
+                                <tr>
+                                    <th>Faculty Name</th>
+                                    <th>Subject</th>
+                                    <th>Experience</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>Ms.P.Swetha</td>
+                                    <td>Data Structures</td>
+                                    <td>12 Years</td>
+                                </tr>
+                                <tr>
+                                    <td>Ms.R.Kavitha </td>
+                                    <td>Web Technology</td>
+                                    <td>8 Years</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </td>
+                </tr>
+
+                <!-- Row 4: Student Details Cell containing Nested Student Table -->
+                <tr>
+                    <th>Student Details</th>
+                    <td>
+                        <!-- HTML Comment: NESTED TABLE FOR STUDENT DETAILS -->
+                        <table class="nested-table" border="1" cellpadding="6" cellspacing="0">
+                            <thead>
+                                <tr>
+                                    <th>Student Name</th>
+                                    <th>Roll Number</th>
+                                    <th>Year</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>Dhyanesh S E</td>
+                                    <td>711524BAD042</td>
+                                    <td>III Year</td>
+                                </tr>
+                                <tr>
+                                    <td>SURESH V</td>
+                                    <td>711524BAD309</td>
+                                    <td>III Year</td>
+                                </tr>
+                                <tr>
+                                    <td>Bala Sujith</td>
+                                    <td>711524BAD026</td>
+                                    <td>III Year</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+
+        <!-- HTML Comment: Concept summary for examination -->
+        <p><em>Concept: Multiple nested tables can be embedded inside different &lt;td&gt; cells of a primary table to group complex relational data cleanly.</em></p>
+    </div>
+
+</body>
+</html>
